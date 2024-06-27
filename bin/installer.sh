@@ -119,12 +119,13 @@ make && sudo make install;
 
 # add updater to cron
 # adding update to reboot because, in can be installed in a laptop.
-updater="${dir}/updater.sh -c -d ${projectDir}";
-if [ -z "$(crontab -l 2>/dev/null | grep $updater)" ];
-then
-  crontab -l 2>/dev/null > $tmpCrontab;
-  printf "%-${firstCrontabWidth}s%-${secondCrontabWidth}s%s\n" \
-	 "@reboot" "/bin/sh" "$updater}";
-  tee $tmpCrontab | crontab -;
-  rm $tmpCrontab;
-fi
+# TODO Debug grep if statement
+# updater="${dir}/updater.sh -c -d ${projectDir}";
+#if [ -z "$(crontab -l 2>/dev/null | grep $updater)" ];
+#then
+#  crontab -l 2>/dev/null > $tmpCrontab;
+#  printf "%-${firstCrontabWidth}s%-${secondCrontabWidth}s%s\n" \
+#	 "@reboot" "/bin/sh" "$updater}";
+#  tee $tmpCrontab | crontab -;
+#  rm $tmpCrontab;
+#fi
