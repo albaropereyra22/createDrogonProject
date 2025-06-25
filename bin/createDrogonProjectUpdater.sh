@@ -5,9 +5,9 @@ cd /opt/createDrogonProject;
 git pull;
 
 which -s drogon_ctl;
-if [ $? != 0 ];;
+if [ $? != 0 ];
 then
-  cd $(which -s drogon_ctl);
+  cd ~/drogon;
   git pull;
   git submodule update --init;
   mkdir build

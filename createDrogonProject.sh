@@ -17,7 +17,7 @@ printf "WARNING:\n";
 printf "This software is in beta, subject to change and prone to errors.\n";
 
 # updateSoftware
-cp createDrogonProjectUpdater.sh ~/bin/;
+cp bin/createDrogonProjectUpdater.sh ~/bin/;
 cd ~/bin;
 ./createDrogonProjectUpdater.sh
 # Get arguments:
