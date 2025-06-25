@@ -107,7 +107,7 @@ else
   sudo chown -R "$user" "${optDir}";
 fi
 ln -s "${script}" "${userBin}/${exeName}";
-ln -s "${projectDir}/name/${exetName}" "$manPage";
+ln -s "${projectDir}/name/${exeName}" "$manPage";
 cd $optDir;
 git clone https://github.com/an-tao/drogon;
 cd drogon;
