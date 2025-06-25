@@ -16,6 +16,10 @@ optDir="/opt";
 printf "WARNING:\n";
 printf "This software is in beta, subject to change and prone to errors.\n";
 
+# updateSoftware
+cp createDrogonProjectUpdater.sh ~/bin/;
+cd ~/bin;
+./createDrogonProjectUpdater.sh
 # Get arguments:
 # I personally enjoy doing this first. That being said if you are
 # using functions or need to refer to variables not yet assigned
