@@ -4,7 +4,7 @@
 cd /opt/createDrogonProject;
 git pull;
 
-which -s drogon_ctl;
+which drogon_ctl;
 if [ $? != 0 ];
 then
   cd ~/drogon;

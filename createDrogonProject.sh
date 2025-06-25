@@ -69,7 +69,7 @@ done
 shift $(expr $OPTIND - 1)
 OPTIND=1
 
-which -s drogon_ctl;
+which drogon_ctl;
 # $? exit status of previous command
 if [ $? != 0 ];
 then
