@@ -90,13 +90,19 @@ repoDir="${optDir}/${softwareName}";
 # Create repo on Github
 gitDir="${repoDir}/.git/";
 cd $optDir;
-gh repo create --confirm --enable-issues=true --enable-wiki=true --private="$private" --public="$public" "$softwareName";
-cd "$repoDir";
+if $private;
+then
+  gh repo create "$softwareName" --private;
+else
+  gh repo create "$softwareName" --public;
+fi
 drogon_ctl create project $softwareName;
+cd $repoDir;
 # This can probably be cleaner with find.
-cp -R "${softwareName}/" "${repoDir}";
-rm -rf "${softwareName}/";
+mkdir -p build;
 cd build;
 cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib -DCMAKE_BUILD_TYPE=Release ..;
 make;
 ./$softwareName
+
+
