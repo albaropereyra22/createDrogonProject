@@ -8,7 +8,6 @@ installer="installer.sh";
 exeName="$(expr $script : '.*/\(.*\)\..*')";
 todaysDate="$(date +%m%d%Y)";
 private="false";
-public="true";
 user="$(whoami)";
 optDir="/opt";
 # Disclaimer
@@ -58,7 +57,6 @@ EOF
 
     "Xp"|"X+p")
       private=true;
-      public=false;
       ;;
     *)
       printf "usage: %s [-hp] [-n (cammelCase program name)]\n" "$exeName" >&2;
