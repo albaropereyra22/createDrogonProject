@@ -1,16 +1,21 @@
 #! /bin/sh -
 
-#  This software is free
-cd /opt/createDrogonProject;
+#  variables
+drogonDir="/opt/drogon";
+createDrogonProjectDir="/opt/createDrogonProject";
+
+#  update createDrogonProject
+cd $createDrogonProjectDir;
 git pull;
 
+#  update drogon
 which drogon_ctl;
-if [ $? != 0 ];
+if [ $? != 1 ];
 then
-  cd ~/drogon;
+  cd $drogonDir;
   git pull;
   git submodule update --init;
-  mkdir build
+  mkdir -p build;
   cd build;
   cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib -DCMAKE_BUILD_TYPE=Release ..;
   make && sudo make install;
