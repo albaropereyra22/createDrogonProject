@@ -11,7 +11,6 @@ private="false";
 public="true";
 user="$(whoami)";
 optDir="/opt";
-
 # Disclaimer
 printf "WARNING:\n";
 printf "This software is in beta, subject to change and prone to errors.\n";
@@ -85,6 +84,8 @@ then
   printf "Enter softwareName(i.e rubbish, bestSoftware etc.): ";
   read softwareName;
 fi
+#  TODO git@github.com:albaropereyra22/$softwareName.git;
+remoteGitRepo="git@github.com:albaropereyra22/${softwareName}.git";
 repoDir="${optDir}/${softwareName}";
 
 # Create repo on Github
@@ -109,6 +110,6 @@ git init;
 git add .;
 git commit -m "first commit";
 git branch -M main;
-git remote add origin git@github.com:albaropereyra22/$softwareName.git;
+git remote add origin $remoteGitRepo;
 git push -u origin main;
 
