@@ -104,5 +104,11 @@ cd build;
 cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib -DCMAKE_BUILD_TYPE=Release ..;
 make;
 ./$softwareName
-
+cd ..;
+git init;
+git add .;
+git commit -m "first commit";
+git branch -M main;
+git remote add origin git@github.com:albaropereyra22/$softwareName.git;
+git push -u origin main;
 
