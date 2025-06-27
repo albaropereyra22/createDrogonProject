@@ -1,5 +1,5 @@
 .\" Manpage for createDrogonProject beta.
-.\" Contact 2AlbaroPereyra to report bugs.
+.\" Contact AlbaroPereyra to report bugs.
 .TH man 1 "02 July 2021" "0.07" "createDrogonProject beta man page"
 .SH NAME
 newProject \- used to create a create a new Drogon project.
@@ -29,4 +29,4 @@ This software is in beta stage and it is subject to change and prone to errors.
 No known bugs.
 
 .SH AUTHOR
-Albaro Pereyra (2AlbaroPereyra@gmail.com)
+Albaro Pereyra (AlbaroPereyra22@gmail.com)
