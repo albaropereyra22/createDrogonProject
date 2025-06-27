@@ -1,9 +1,10 @@
 #! /bin/sh -
 
 #  variables
-drogonDir="/opt/drogon";
-createDrogonProjectDir="/opt/createDrogonProject";
-
+drogonDir="/opt/drogon/";
+createDrogonProjectDir="/opt/createDrogonProject/";
+exeName="createDrogonProject.sh";
+binDir="~/bin/";
 #  update createDrogonProject
 cd $createDrogonProjectDir;
 git pull;
@@ -30,3 +31,5 @@ then
   cmake -DCMAKE_BUILD_TYPE=Release ..;
   make && sudo make install;
 fi
+
+cp "${$createDrogonProjectDir}${exeName}" "${binDir}";
