@@ -32,4 +32,4 @@ then
   make && sudo make install;
 fi
 
-cp "${$createDrogonProjectDir}${exeName}" "${binDir}";
+cp "${createDrogonProjectDir}${exeName}" "${binDir}";
