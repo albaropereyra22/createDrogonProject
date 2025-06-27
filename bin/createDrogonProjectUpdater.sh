@@ -8,6 +8,16 @@ createDrogonProjectDir="/opt/createDrogonProject";
 cd $createDrogonProjectDir;
 git pull;
 
+#  update brew or apt
+OS=$(uname -s)
+if [  "XDarwin"="X${OS}" ];
+then
+  # check if brew is installed or install it on install.sh
+  brew update;
+  brew upgrade;
+else
+  echo "other OS"
+fi
 #  update drogon
 which drogon_ctl;
 if [ $? != 1 ];

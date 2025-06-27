@@ -75,7 +75,7 @@ do
 	git config pull.rebase false;
 	# set default branch to main since git now complains if it is master.
 	defaultBranch=main
-	git config --global init.defaultBranch $defaultBranch
+	git config --global init.defaultBranch $defaultBranch	
 	# TODO 
 	# walk user through github ssh setup
 	;;
