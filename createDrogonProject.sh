@@ -89,7 +89,7 @@ repoDir="${optDir}/${softwareName}";
 # Create repo on Github
 gitDir="${repoDir}/.git/";
 cd $optDir;
-if $private;
+if [ $private ];
 then
   gh repo create "$softwareName" --private;
 else
