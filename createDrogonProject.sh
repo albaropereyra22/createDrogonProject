@@ -82,7 +82,21 @@ then
   printf "Enter softwareName(i.e rubbish, bestSoftware etc.): ";
   read softwareName;
 fi
+
+
 #  TODO git@github.com:albaropereyra22/$softwareName.git;
+if [ -z "$gitServer" ];
+then
+  printf "Enter git server name(i.e git@github.com, al@server.com etc.): ";
+  read gitServer;
+fi
+
+if [ -z "$ghUserName" ]
+then
+  printf "Enter GitHub User Name(i.e albaropereyra22, opt etc.): ";
+  read ghUserName;
+fi
+
 remoteGitRepo="git@github.com:albaropereyra22/${softwareName}.git";
 repoDir="${optDir}/${softwareName}";
 
@@ -110,4 +124,3 @@ git commit -m "first commit";
 git branch -M main;
 git remote add origin $remoteGitRepo;
 git push -u origin main;
-
