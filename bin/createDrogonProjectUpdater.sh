@@ -4,7 +4,7 @@
 drogonDir="/opt/drogon/";
 createDrogonProjectDir="/opt/createDrogonProject/";
 exeName="createDrogonProject.sh";
-binDir="~/bin/";
+binDir="${HOME}/bin";
 #  update createDrogonProject
 cd $createDrogonProjectDir;
 git pull;
