@@ -11,7 +11,7 @@ git pull;
 
 #  update brew or apt
 OS=$(uname -s)
-if [  "XDarwin"="X${OS}" ];
+if [ "XDarwin" = "X${OS}" ];
 then
   # check if brew is installed or install it on install.sh
   brew update;
