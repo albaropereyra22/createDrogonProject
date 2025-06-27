@@ -27,6 +27,6 @@ then
   git submodule update --init;
   mkdir -p build;
   cd build;
-  cmake -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib -DCMAKE_BUILD_TYPE=Release ..;
+  cmake -DCMAKE_BUILD_TYPE=Release ..;
   make && sudo make install;
 fi
