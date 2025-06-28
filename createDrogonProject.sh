@@ -97,7 +97,7 @@ then
   read ghUserName;
 fi
 
-remoteGitRepo="git@github.com:albaropereyra22/${softwareName}.git";
+remoteGitRepo="${gitServer:=git@github.com}:${ghUsername:=albaropereyra22}/${softwareName}.git";
 repoDir="${optDir}/${softwareName}";
 
 # Create repo on Github
@@ -116,7 +116,7 @@ mkdir -p build;
 cd build;
 cmake -DCMAKE_BUILD_TYPE=Release ..;
 make;
-./$softwareName
+./$softwareName&
 cd ..;
 git init;
 git add .;
