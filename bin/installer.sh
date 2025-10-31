@@ -45,7 +45,8 @@ sqlite
 mariadb
 hiredis
 brotli
-yaml-cpp
+#The following line causes problems at compile time
+#yaml-cpp
 EOF)"
 
 OLDIFS=$IFS;
