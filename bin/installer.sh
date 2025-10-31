@@ -37,13 +37,15 @@ cmake
 jsoncpp
 ossp-uuid
 zlib
-openssl@1.1
+#openssl@1.1
+openssl
 c-ares
 boost
 sqlite
 mariadb
 hiredis
 brotli
+yaml-cpp
 EOF)"
 
 OLDIFS=$IFS;
