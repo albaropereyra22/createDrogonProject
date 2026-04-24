@@ -2,7 +2,7 @@
 
 #  variables
 drogonDir="/opt/drogon/";
-createDrogonProjectDir="/opt/createDrogonProject/";
+createDrogonProjectDir="~/opt/createDrogonProject/";
 exeName="createDrogonProject.sh";
 binDir="${HOME}/bin";
 #  update createDrogonProject
