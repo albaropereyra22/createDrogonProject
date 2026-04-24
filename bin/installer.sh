@@ -14,7 +14,7 @@ manDir="/usr/local/share/man/man1";
 manFileExtension=".1";
 manPage="$manDir/${exeName}${manFileExtension}";
 userBin="/usr/local/bin/";
-optDir="/opt/";
+optDir="~/opt/";
 chmod -R u+x "$dir";
 
 # -s returns 0 if found otherwise 1
