@@ -24,9 +24,11 @@ fi
 which drogon_ctl;
 if [ $? != 1 ];
 then
+  #if ~/opt/drogon does not exists then
   cp $optDir/createDrogonProject/installer.sh ~/bin/installer.sh;
   chmod u+x ~/bin/installer.sh
   sh ~/bin/installer.sh
+  #fi
   cd $drogonDir;
   git pull;
   git submodule update --init;
