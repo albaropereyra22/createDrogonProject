@@ -5,6 +5,7 @@ drogonDir="~/opt/drogon/";
 createDrogonProjectDir="~/opt/createDrogonProject/";
 exeName="createDrogonProject.sh";
 binDir="${HOME}/bin";
+optDir="~/opt/";
 #  update createDrogonProject
 cd $createDrogonProjectDir;
 git pull;
@@ -23,6 +24,9 @@ fi
 which drogon_ctl;
 if [ $? != 1 ];
 then
+  cp $optDir/createDrogonProject/installer.sh ~/bin/installer.sh;
+  chmod u+x ~/bin/installer.sh
+  sh ~/bin/installer.sh
   cd $drogonDir;
   git pull;
   git submodule update --init;
