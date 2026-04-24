@@ -9,7 +9,7 @@ exeName="$(expr $script : '.*/\(.*\)\..*')";
 todaysDate="$(date +%m%d%Y)";
 private="false";
 user="$(whoami)";
-optDir="/opt";
+optDir="~/opt";
 # Disclaimer
 printf "WARNING:\n";
 printf "This software is in beta, subject to change and prone to errors.\n";
