@@ -1,7 +1,7 @@
 #! /bin/sh -
 
 #  variables
-drogonDir="/opt/drogon/";
+drogonDir="~/opt/drogon/";
 createDrogonProjectDir="~/opt/createDrogonProject/";
 exeName="createDrogonProject.sh";
 binDir="${HOME}/bin";
