@@ -96,7 +96,7 @@ do
 done
 IFS=$OLDIFS;
 
-optDir="/opt":
+optDir="~/opt":
 if [ -e "$optDir" ];
 then
   testDir="${optDir}/test";
