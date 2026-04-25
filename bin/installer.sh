@@ -72,16 +72,14 @@ do
     case "X$dep" in
       "Xgit")
         git config --global user.name "$(id -F)";
-	printf "Enter email account (ex. username@gmail.com): ";
-	read emailAddress;
-	git config --global user.email "emailAddress";
-	# set the default conflict resolution.
-	git config pull.rebase false;
-	# set default branch to main since git now complains if it is master.
-	defaultBranch=main
-	git config --global init.defaultBranch $defaultBranch	
-	# TODO 
-	# walk user through github ssh setup
+	    printf "Enter email account (ex. username@gmail.com): ";
+	    read emailAddress;
+	    git config --global user.email "emailAddress";
+	    # set the default conflict resolution.
+	    git config pull.rebase false;
+	    # set default branch to main since git now complains if it is master.
+	    defaultBranch=main;
+	    git config --global init.defaultBranch $defaultBranch;
 	;;
       "Xgh")
 	gh auth login;
