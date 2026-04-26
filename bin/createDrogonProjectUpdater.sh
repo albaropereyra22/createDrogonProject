@@ -15,7 +15,15 @@ git pull;
 OS=$(uname -s)
 if [ "XDarwin" = "X${OS}" ];
 then
-  # check if brew is installed or install it on install.sh
+  # check if brew is installed
+  # -s returns 0 if found otherwise 1
+  which -s brew;
+  # $? exit status of previous command
+  if [ $? != 0 ];
+  then
+    # Install Homebrew
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";
+  fi
   brew update;
   brew upgrade;
 else
