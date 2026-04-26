@@ -45,7 +45,6 @@ sqlite
 mariadb
 hiredis
 brotli
-#The following line causes problems at compile time
 yaml-cpp
 EOF)"
 
