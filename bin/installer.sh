@@ -37,7 +37,6 @@ cmake
 jsoncpp
 ossp-uuid
 zlib
-#openssl@1.1
 openssl
 c-ares
 boost
@@ -46,6 +45,7 @@ mariadb
 hiredis
 brotli
 yaml-cpp
+doxygen
 EOF)"
 
 OLDIFS=$IFS;
