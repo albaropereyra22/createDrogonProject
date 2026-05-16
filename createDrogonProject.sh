@@ -98,7 +98,9 @@ then
 fi
 
 remoteGitRepo="${gitServer:=git@github.com}:${ghUsername:=albaropereyra22}/${softwareName}.git";
-repoDir="${optDir}/${softwareName}";
+repoDir="${optDir}${softwareName}";
+
+echo $remoteGitRepo;
 
 # Create repo on Github
 gitDir="${repoDir}/.git/";
