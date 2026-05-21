@@ -105,7 +105,7 @@ echo $remoteGitRepo;
 # Create repo on Github
 gitDir="${repoDir}/.git/";
 cd $optDir;
-if [ $private ];
+if [ "$private" = "true" ];
 then
   gh repo create "$softwareName" --private;
 else
