@@ -97,7 +97,7 @@ then
   read ghUserName;
 fi
 
-remoteGitRepo="${gitServer:=git@github.com}:${ghUsername:=albaropereyra22}/${softwareName}.git";
+remoteGitRepo="${gitServer:=git@github.com}:${ghUserName:=albaropereyra22}/${softwareName}.git";
 repoDir="${optDir}${softwareName}";
 
 echo $remoteGitRepo;
