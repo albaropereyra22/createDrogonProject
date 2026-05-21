@@ -14,7 +14,7 @@ manDir="/usr/local/share/man/man1";
 manFileExtension=".1";
 manPage="$manDir/${exeName}${manFileExtension}";
 userBin="/usr/local/bin/";
-optDir="~/opt/";
+optDir="$HOME/opt/";
 chmod -R u+x "$dir";
 
 # -s returns 0 if found otherwise 1
@@ -73,7 +73,7 @@ do
         git config --global user.name "$(id -F)";
 	    printf "Enter email account (ex. username@gmail.com): ";
 	    read emailAddress;
-	    git config --global user.email "emailAddress";
+	    git config --global user.email "$emailAddress";
 	    # set the default conflict resolution.
 	    git config pull.rebase false;
 	    # set default branch to main since git now complains if it is master.
