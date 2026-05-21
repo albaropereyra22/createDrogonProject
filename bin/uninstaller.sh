@@ -36,7 +36,7 @@ OPTIND=1;
 crontab -l 2>/dev/null | grep -v "$updater" > $tmpCrontab;
 cat "$tmpCrontab" | crontab -
 rm "$tmpCrontab";
-rm -rf "mapPage";
+rm -rf "$manPage";
 #remove drogon
 rm -rf "$drogonDir";
 # self destruct
