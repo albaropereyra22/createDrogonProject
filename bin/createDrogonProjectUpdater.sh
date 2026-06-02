@@ -5,7 +5,7 @@
 createDrogonProjectDir="~/opt/createDrogonProject";
 exeName="createDrogonProject.sh";
 binDir="${HOME}/bin";
-optDir="~/opt/";
+optDir="$HOME/opt/";
 drogonDir="${optDir}drogon/";
 #  update createDrogonProject
 cd $createDrogonProjectDir;
@@ -52,3 +52,4 @@ then
 fi
 
 cp "${createDrogonProjectDir}${exeName}" "${binDir}";
+x
